@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="all">
+    <div id="block1">
+      <h5 class="block1_h5">Your Result</h5>
+      <div class="cercle">
+        <h1>76</h1>
+        <p>of 100</p>
+      </div>
+      <div class="block1_foot">
+        <h2>Great</h2>
+        <p> You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+    </div>
+    <div id="block2">
+      <h5 class="Summary">Summary</h5>
+      <div id="RMV">
+
+
+      </div>
+      <div class="continue">Continue</div>
+    </div>
+
+  </div><br>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">BCV Max</a>.
+  </div>
+  <script>
+    const equipe =
+      [
+        {
+          "category": "Reaction",
+          "score": 80,
+          "icon": "./assets/images/icon-reaction.svg"
+        },
+        {
+          "category": "Memory",
+          "score": 92,
+          "icon": "./assets/images/icon-memory.svg"
+        },
+        {
+          "category": "Verbal",
+          "score": 61,
+          "icon": "./assets/images/icon-verbal.svg"
+        },
+        {
+          "category": "Visual",
+          "score": 73,
+          "icon": "./assets/images/icon-visual.svg"
+        }
+      ];
+        
+          const conteneur = document.getElementById("RMV");
+
+          equipe.forEach(membre => {
+            const carte = document.createElement("div");
+            carte.className = "carte";
+            carte.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="${membre.icon}" alt="${membre.category}">
+            <h5>${membre.category}</h5>
+          </div>
+          <p><span>${membre.score}</span> / 100</p>
+        `;
+            conteneur.appendChild(carte);
+        });
+
+        
+  </script>
+
+
+</body>
+
+</html>
