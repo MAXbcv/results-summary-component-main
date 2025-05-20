@@ -42,10 +42,13 @@ body {
 }
 
 .Summary {
-    color: hsl(224, 30%, 27%);
+
     margin-top: 20px;
 }
-
+.carte .para span,
+.Summary{
+        color: hsl(224, 30%, 27%);
+}
 h1 {
     font-size: 50px;
     color: hsl(0, 0%, 100%);
@@ -128,6 +131,7 @@ p {
     margin: 0px;
     font-size: 15px;
 }
+
 
 .continue {
     text-align: center;
